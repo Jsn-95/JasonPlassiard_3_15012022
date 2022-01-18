@@ -1,0 +1,19 @@
+{
+    "name": "jasonplassiard_3_15012022",
+    "version": "1.0.0",
+    "description": "Formation Développeur Web OpenClassrooms Projet 3",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch ./sass/index.scss:./public/css/index.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Jsn-95/JasonPlassiard_3_15012022.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Jsn-95/JasonPlassiard_3_15012022/issues"
+    },
+    "homepage": "https://github.com/Jsn-95/JasonPlassiard_3_15012022#readme"
+}

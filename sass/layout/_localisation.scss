@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 .localisation {
     &__search {
         background-color: #e7e7e7;
@@ -16,7 +18,7 @@
 
     &__reserve {
         background-color: #f3f3f3;
-        height: 250px;
+        height: 290px;
         text-align: center;
 
         & h2 {
@@ -26,23 +28,27 @@
         & p {
             font-size: 18px;
             font-weight: 300;
-            color: #3a3a3a;
+            color: #585858;
             margin-bottom: 30px;
         }
 
         & button {
+            height: 50px;
+            width: 215px;
             border-radius: 50px;
-            height: 20%;
-            width: 57%;
             border: none;
-            box-shadow: 0px 3px 5px lightgray;
-            background: linear-gradient(to bottom right, blue, white);
+            box-shadow: 0px 5px 5px lightgray;
+            background: linear-gradient(
+                to bottom right,
+                variables.$color-secondary,
+                variables.$color-primary
+            );
         }
 
         & span {
             color: white;
-            font-size: 13px;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: 500;
         }
     }
 }

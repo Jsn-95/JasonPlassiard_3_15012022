@@ -364,6 +364,9 @@ h1 {
   width: 50%;
 }
 
+.localisation {
+  margin-bottom: 50px;
+}
 .localisation__search {
   background-color: #e7e7e7;
   height: 50px;
@@ -402,6 +405,48 @@ h1 {
 .localisation__reserve span {
   color: white;
   font-size: 16px;
+  font-weight: 500;
+}
+
+.functioning h2 {
+  margin-left: 20px;
+}
+.functioning ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 280px;
+  padding-left: 30px;
+}
+.functioning ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  background-color: whitesmoke;
+  border-radius: 17px;
+  height: 70px;
+  width: 95%;
+  text-align: center;
+  box-shadow: 0px 5px 5px lightgray;
+  position: relative;
+}
+.functioning__number {
+  color: white;
+  position: absolute;
+  left: -10px;
+  background-color: #9356dc;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  padding-top: 4px;
+}
+.functioning i {
+  color: #818181;
+  position: absolute;
+  left: 40px;
+}
+.functioning__text {
   font-weight: 500;
 }
 

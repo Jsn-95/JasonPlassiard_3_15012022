@@ -1,15 +1,14 @@
 @use "../utils/variables";
+@use "../utils/placeholders";
 
 .localisation {
     margin-bottom: 50px;
     &__search {
+        @extend %flex-center;
         background-color: #e7e7e7;
         height: 50px;
         font-weight: 500;
         color: #3f3f3f;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
         & i {
             position: absolute;
@@ -38,7 +37,7 @@
             width: 215px;
             border-radius: 50px;
             border: none;
-            box-shadow: 0px 5px 5px lightgray;
+            @extend %box-shadow;
             background: linear-gradient(
                 to bottom right,
                 variables.$color-secondary,
@@ -47,7 +46,7 @@
         }
 
         & span {
-            color: white;
+            color: #ffffff;
             font-size: 16px;
             font-weight: 500;
         }

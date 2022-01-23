@@ -74,6 +74,8 @@ pre {
    * Remove the gray background on active links in IE 10.
    */
 a {
+  color: black;
+  text-decoration: none;
   background-color: transparent;
 }
 
@@ -364,6 +366,16 @@ h1 {
   width: 50%;
 }
 
+.card span, .functioning ul li, .localisation__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__article, .functioning ul li, .localisation__reserve button {
+  box-shadow: 0px 5px 5px #d3d3d3;
+}
+
 .localisation {
   margin-bottom: 50px;
 }
@@ -372,9 +384,6 @@ h1 {
   height: 50px;
   font-weight: 500;
   color: #3f3f3f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .localisation__search i {
   position: absolute;
@@ -399,11 +408,10 @@ h1 {
   width: 215px;
   border-radius: 50px;
   border: none;
-  box-shadow: 0px 5px 5px lightgray;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 .localisation__reserve span {
-  color: white;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 500;
 }
@@ -419,20 +427,16 @@ h1 {
   padding-left: 30px;
 }
 .functioning ul li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   list-style-type: none;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   border-radius: 17px;
   height: 70px;
   width: 95%;
   text-align: center;
-  box-shadow: 0px 5px 5px lightgray;
   position: relative;
 }
 .functioning__number {
-  color: white;
+  color: #ffffff;
   position: absolute;
   left: -10px;
   background-color: #9356dc;
@@ -448,6 +452,66 @@ h1 {
 }
 .functioning__text {
   font-weight: 500;
+}
+
+.restaurants {
+  background-color: #e7e7e7;
+  height: 1300px;
+}
+.restaurants h2 {
+  padding: 50px 0 20px 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  height: 1080px;
+}
+.card__article {
+  background-color: white;
+  height: 255px;
+  width: 90%;
+  border-radius: 20px;
+  position: relative;
+}
+.card__image {
+  border-radius: 20px 20px 0 0;
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+.card__title {
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+.card__text {
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.card i {
+  position: absolute;
+  right: 25px;
+  bottom: 27px;
+  font-size: 25px;
+}
+.card span {
+  background-color: #89f0c8;
+  color: #268d4e;
+  font-size: 15px;
+  font-weight: 500;
+  height: 29px;
+  width: 85px;
+  border-radius: 2px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 
 /*# sourceMappingURL=index.css.map */

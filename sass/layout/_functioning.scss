@@ -6,17 +6,16 @@
         margin-left: 20px;
     }
 
-    ul {
+    & ul {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         height: 280px;
         padding-left: 30px;
 
-        li {
+        & li {
             @extend %flex-center;
             @extend %box-shadow;
-            list-style-type: none;
             background-color: #f5f5f5;
             border-radius: 17px;
             height: 70px;

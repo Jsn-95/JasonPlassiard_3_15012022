@@ -79,6 +79,10 @@ a {
   background-color: transparent;
 }
 
+li {
+  list-style-type: none;
+}
+
 /**
    * 1. Remove the bottom border in Chrome 57-
    * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -349,7 +353,8 @@ template {
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
+h1,
+h4 {
   font-family: "Shrikhand", cursive;
 }
 
@@ -427,7 +432,6 @@ h1 {
   padding-left: 30px;
 }
 .functioning ul li {
-  list-style-type: none;
   background-color: #f5f5f5;
   border-radius: 17px;
   height: 70px;
@@ -456,7 +460,7 @@ h1 {
 
 .restaurants {
   background-color: #e7e7e7;
-  height: 1300px;
+  height: 1250px;
 }
 .restaurants h2 {
   padding: 50px 0 20px 20px;
@@ -512,6 +516,47 @@ h1 {
   position: absolute;
   right: 15px;
   top: 15px;
+}
+
+footer {
+  background-color: #363636;
+  height: 200px;
+  padding-top: 25px;
+  padding-left: 25px;
+}
+footer h4 {
+  color: #f5f5f5;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+footer ul {
+  padding-left: 0px;
+  position: relative;
+}
+footer ul li {
+  color: #e0e0e0;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+footer ul .footer__span-ustensil {
+  padding-left: 24px;
+  color: #fafafa;
+}
+footer ul .fa-utensils {
+  font-size: 14px;
+  position: absolute;
+  top: 3px;
+}
+footer ul .footer__span-help {
+  color: #fafafa;
+}
+footer ul .fa-hands-helping {
+  font-size: 12px;
+  padding-right: 5px;
+  transform: rotate(-10deg);
 }
 
 /*# sourceMappingURL=index.css.map */

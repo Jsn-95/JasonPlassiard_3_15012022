@@ -1,0 +1,12 @@
+@use "../utils/variables";
+@use "../utils/placeholders";
+@use "../utils/mixins";
+
+.button {
+    height: 50px;
+    width: 215px;
+    border-radius: 50px;
+    border: none;
+    @extend %box-shadow;
+    @include mixins.gradient;
+}

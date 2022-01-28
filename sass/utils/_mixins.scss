@@ -1,0 +1,9 @@
+@use "../utils/variables";
+
+@mixin gradient($opacity: 0.9) {
+    background: linear-gradient(
+        to bottom right,
+        variables.$color-secondary,
+        variables.$color-primary
+    );
+}

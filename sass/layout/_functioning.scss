@@ -1,5 +1,6 @@
 @use "../utils/variables";
 @use "../utils/placeholders";
+@use "../utils/mixins";
 
 .functioning {
     & h2 {
@@ -15,7 +16,7 @@
 
         & li {
             @extend %flex-center;
-            @extend %box-shadow;
+            @extend %shadow;
             background-color: #f5f5f5;
             border-radius: 17px;
             height: 70px;

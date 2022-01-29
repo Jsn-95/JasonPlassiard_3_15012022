@@ -1,0 +1,5 @@
+@use "../utils/mixins";
+
+.fa-heart {
+    @include mixins.heart(absolute, auto, 25px, 27px, auto, 25px);
+}

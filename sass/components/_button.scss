@@ -7,6 +7,6 @@
     width: 215px;
     border-radius: 50px;
     border: none;
-    @extend %box-shadow;
+    @extend %shadow;
     @include mixins.gradient;
 }

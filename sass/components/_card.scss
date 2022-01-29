@@ -1,5 +1,7 @@
 @use "../utils/variables";
 @use "../utils/placeholders";
+@use "../utils/mixins";
+@use "../components/heart";
 
 .card {
     display: flex;
@@ -10,7 +12,7 @@
     height: 1080px;
 
     &__article {
-        @extend %box-shadow;
+        @extend %shadow;
         background-color: variables.$white;
         height: 255px;
         width: 90%;
@@ -37,13 +39,6 @@
         padding-left: 15px;
         font-size: 18px;
         font-weight: 300;
-    }
-
-    & i {
-        position: absolute;
-        right: 25px;
-        bottom: 27px;
-        font-size: 25px;
     }
 
     & span {

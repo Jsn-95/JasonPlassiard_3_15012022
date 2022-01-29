@@ -1,5 +1,8 @@
+@use "../utils/mixins";
+@use "../utils/placeholders";
+
 .header {
-    box-shadow: 0px 3px 5px lightgray;
+    @extend %shadow;
     position: relative;
 
     & h1 {

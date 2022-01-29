@@ -1,0 +1,31 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+@use "../utils/placeholders";
+@use "../components/arrow-left";
+
+.menu__header--shadow {
+    box-shadow: none;
+}
+
+.menu__image {
+    width: 100%;
+}
+
+.menu {
+    background-color: #f3f3f3;
+    height: 1000px;
+    border-radius: 40px 40px 0 0;
+    margin-top: -60px;
+    border: 2px solid salmon;
+    position: relative;
+
+    & h2 {
+        font-family: variables.$police-title;
+        padding-top: 30px;
+        padding-left: 20px;
+        @extend %font-weight;
+    }
+    & .fa-heart {
+        @include mixins.heart(absolute, 3px, 25px, 0, auto, 25px);
+    }
+}

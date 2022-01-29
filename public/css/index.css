@@ -5,8 +5,12 @@
   align-items: center;
 }
 
-.button, .card__article, .functioning ul li {
+.button, .card__article, .functioning ul li, .header {
   box-shadow: 0px 5px 5px #d3d3d3;
+}
+
+.menu h2, footer h4 {
+  font-weight: 200;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -363,13 +367,7 @@ template {
   font-family: "Roboto", sans-serif;
 }
 
-h1,
-h4 {
-  font-family: "Shrikhand", cursive;
-}
-
 .header {
-  box-shadow: 0px 3px 5px lightgray;
   position: relative;
 }
 .header h1 {
@@ -466,14 +464,14 @@ footer {
   padding-left: 25px;
 }
 footer h4 {
+  font-family: "Shrikhand", cursive;
   color: #f5f5f5;
   margin: 0;
   font-size: 20px;
-  font-weight: 200;
   margin-bottom: 20px;
 }
 footer ul {
-  padding-left: 0px;
+  padding-left: 0;
   position: relative;
 }
 footer ul li {
@@ -481,6 +479,9 @@ footer ul li {
   font-size: 17px;
   font-weight: 400;
   margin-bottom: 7px;
+}
+footer ul li a {
+  color: #e0e0e0;
 }
 footer ul .footer__span-ustensil {
   padding-left: 24px;
@@ -498,6 +499,15 @@ footer ul .fa-hands-helping {
   font-size: 12px;
   padding-right: 5px;
   transform: rotate(-10deg);
+}
+
+.fa-heart {
+  position: absolute;
+  top: auto;
+  right: 25px;
+  bottom: 27px;
+  left: auto;
+  font-size: 25px;
 }
 
 .card {
@@ -533,12 +543,6 @@ footer ul .fa-hands-helping {
   font-size: 18px;
   font-weight: 300;
 }
-.card i {
-  position: absolute;
-  right: 25px;
-  bottom: 27px;
-  font-size: 25px;
-}
 .card span {
   background-color: #99e2d0;
   color: #1b6150;
@@ -560,15 +564,42 @@ footer ul .fa-hands-helping {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 
-.header {
-  position: relative;
-}
-.header i {
+.fa-arrow-left {
   position: absolute;
   left: 30px;
   top: 24px;
   color: #3f3f3f;
   font-size: 23px;
+}
+
+.menu__header--shadow {
+  box-shadow: none;
+}
+
+.menu__image {
+  width: 100%;
+}
+
+.menu {
+  background-color: #f3f3f3;
+  height: 1000px;
+  border-radius: 40px 40px 0 0;
+  margin-top: -60px;
+  border: 2px solid salmon;
+  position: relative;
+}
+.menu h2 {
+  font-family: "Shrikhand", cursive;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+.menu .fa-heart {
+  position: absolute;
+  top: auto;
+  right: 25px;
+  bottom: 27px;
+  left: auto;
+  font-size: 25px;
 }
 
 /*# sourceMappingURL=index.css.map */

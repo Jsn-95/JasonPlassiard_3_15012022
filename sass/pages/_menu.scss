@@ -19,13 +19,19 @@
     border: 2px solid salmon;
     position: relative;
 
-    & h2 {
-        font-family: variables.$police-title;
-        padding-top: 30px;
-        padding-left: 20px;
-        @extend %font-weight;
-    }
-    & .fa-heart {
-        @include mixins.heart(absolute, 3px, 25px, 0, auto, 25px);
+    &__title {
+        & h2 {
+            font-family: variables.$police-title;
+            font-size: 28px;
+            padding-top: 30px;
+            padding-left: 20px;
+            @extend %font-weight;
+        }
+        & .fa-heart {
+            position: absolute;
+            top: 34px;
+            right: 35px;
+            font-size: 25px;
+        }
     }
 }

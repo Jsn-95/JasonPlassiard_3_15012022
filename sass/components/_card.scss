@@ -1,7 +1,6 @@
 @use "../utils/variables";
 @use "../utils/placeholders";
 @use "../utils/mixins";
-@use "../components/heart";
 
 .card {
     display: flex;
@@ -31,6 +30,7 @@
         margin: 0;
         padding-top: 10px;
         padding-left: 15px;
+        font-weight: 700;
     }
 
     &__text {
@@ -39,6 +39,13 @@
         padding-left: 15px;
         font-size: 18px;
         font-weight: 300;
+    }
+
+    & .fa-heart {
+        position: absolute;
+        right: 25px;
+        bottom: 27px;
+        font-size: 25px;
     }
 
     & span {

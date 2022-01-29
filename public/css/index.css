@@ -9,7 +9,7 @@
   box-shadow: 0px 5px 5px #d3d3d3;
 }
 
-.menu h2, footer h4 {
+.menu__title h2, footer h4 {
   font-weight: 200;
 }
 
@@ -376,7 +376,7 @@ template {
   margin: 0;
 }
 .header h1 img {
-  width: 50%;
+  width: 45%;
 }
 
 .localisation {
@@ -501,15 +501,6 @@ footer ul .fa-hands-helping {
   transform: rotate(-10deg);
 }
 
-.fa-heart {
-  position: absolute;
-  top: auto;
-  right: 25px;
-  bottom: 27px;
-  left: auto;
-  font-size: 25px;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -535,6 +526,7 @@ footer ul .fa-hands-helping {
   margin: 0;
   padding-top: 10px;
   padding-left: 15px;
+  font-weight: 700;
 }
 .card__text {
   margin: 0;
@@ -542,6 +534,12 @@ footer ul .fa-hands-helping {
   padding-left: 15px;
   font-size: 18px;
   font-weight: 300;
+}
+.card .fa-heart {
+  position: absolute;
+  right: 25px;
+  bottom: 27px;
+  font-size: 25px;
 }
 .card span {
   background-color: #99e2d0;
@@ -588,17 +586,16 @@ footer ul .fa-hands-helping {
   border: 2px solid salmon;
   position: relative;
 }
-.menu h2 {
+.menu__title h2 {
   font-family: "Shrikhand", cursive;
+  font-size: 28px;
   padding-top: 30px;
   padding-left: 20px;
 }
-.menu .fa-heart {
+.menu__title .fa-heart {
   position: absolute;
-  top: auto;
-  right: 25px;
-  bottom: 27px;
-  left: auto;
+  top: 34px;
+  right: 35px;
   font-size: 25px;
 }
 

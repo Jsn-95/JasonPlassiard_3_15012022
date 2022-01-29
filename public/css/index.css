@@ -560,4 +560,15 @@ footer ul .fa-hands-helping {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 
+.header {
+  position: relative;
+}
+.header i {
+  position: absolute;
+  left: 30px;
+  top: 24px;
+  color: #3f3f3f;
+  font-size: 23px;
+}
+
 /*# sourceMappingURL=index.css.map */

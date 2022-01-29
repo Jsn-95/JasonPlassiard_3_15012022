@@ -1,0 +1,10 @@
+.header {
+    position: relative;
+    & i {
+        position: absolute;
+        left: 30px;
+        top: 24px;
+        color: #3f3f3f;
+        font-size: 23px;
+    }
+}

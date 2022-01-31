@@ -1,18 +1,18 @@
 @use "../utils/variables";
 
-@mixin heart($position, $top, $right, $bottom, $left, $font-size) {
-    position: absolute;
-    top: auto;
-    right: 25px;
-    bottom: 27px;
-    left: auto;
-    font-size: 25px;
-}
-
-@mixin gradient($opacity: 0.9) {
+@mixin gradient {
     background: linear-gradient(
         to bottom right,
         variables.$color-secondary,
         variables.$color-primary
     );
+}
+
+@mixin menu($height) {
+    background-color: #f3f3f3;
+    height: $height;
+    border-radius: 40px 40px 0 0;
+    margin-top: -60px;
+    padding: 35px 10px;
+    position: relative;
 }

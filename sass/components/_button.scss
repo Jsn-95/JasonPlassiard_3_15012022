@@ -7,6 +7,13 @@
     width: 215px;
     border-radius: 50px;
     border: none;
+    color: variables.$white;
+    opacity: 1;
+    cursor: pointer;
     @extend %shadow;
     @include mixins.gradient;
+
+    &:hover {
+        transform: scale(2);
+    }
 }

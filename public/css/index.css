@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.button, .card__article, .functioning ul li, .header {
+.menu .menucard__div--light, .button, .card__article, .functioning ul li, .header {
   box-shadow: 0px 5px 5px #d3d3d3;
 }
 
@@ -32,10 +32,6 @@ html {
 /**
    * Remove the margin in all browsers.
    */
-body {
-  margin: 0;
-}
-
 /**
    * Render the `main` element consistently in IE.
    */
@@ -49,11 +45,6 @@ main {
    */
 h1 {
   font-size: 2em;
-  margin: 0;
-}
-
-h2 {
-  margin: 0;
 }
 
 /* Grouping content
@@ -363,6 +354,7 @@ template {
 }
 
 * {
+  margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
@@ -399,6 +391,7 @@ template {
 }
 .localisation__reserve h2 {
   padding-top: 40px;
+  margin-bottom: 10px;
 }
 .localisation__reserve p {
   font-size: 18px;
@@ -413,7 +406,7 @@ template {
 }
 
 .functioning h2 {
-  margin-left: 20px;
+  margin: auto auto 15px 20px;
 }
 .functioning ul {
   display: flex;
@@ -421,6 +414,7 @@ template {
   justify-content: space-around;
   height: 280px;
   padding-left: 30px;
+  margin-bottom: 60px;
 }
 .functioning ul li {
   background-color: #f5f5f5;
@@ -431,14 +425,15 @@ template {
   position: relative;
 }
 .functioning__number {
-  color: #ffffff;
-  position: absolute;
-  left: -10px;
-  background-color: #9356dc;
   height: 25px;
   width: 25px;
+  background-color: #9356dc;
+  color: #ffffff;
   border-radius: 50%;
-  padding-top: 4px;
+  position: absolute;
+  left: -10px;
+  padding-top: 5px;
+  font-size: 15px;
 }
 .functioning i {
   color: #818181;
@@ -476,7 +471,7 @@ footer ul {
 }
 footer ul li {
   color: #e0e0e0;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 400;
   margin-bottom: 7px;
 }
@@ -526,13 +521,14 @@ footer ul .fa-hands-helping {
   margin: 0;
   padding-top: 10px;
   padding-left: 15px;
+  font-size: 18px;
   font-weight: 700;
 }
 .card__text {
   margin: 0;
   padding-top: 5px;
   padding-left: 15px;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 300;
 }
 .card .fa-heart {
@@ -559,7 +555,13 @@ footer ul .fa-hands-helping {
   width: 215px;
   border-radius: 50px;
   border: none;
+  color: #ffffff;
+  opacity: 1;
+  cursor: pointer;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
+}
+.button:hover {
+  transform: scale(2);
 }
 
 .fa-arrow-left {
@@ -580,23 +582,70 @@ footer ul .fa-hands-helping {
 
 .menu {
   background-color: #f3f3f3;
-  height: 1000px;
+  height: 1145px;
   border-radius: 40px 40px 0 0;
   margin-top: -60px;
-  border: 2px solid salmon;
+  padding: 35px 10px;
   position: relative;
+}
+.menu__title {
+  margin-bottom: 40px;
 }
 .menu__title h2 {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
-  padding-top: 30px;
-  padding-left: 20px;
 }
 .menu__title .fa-heart {
   position: absolute;
-  top: 34px;
+  top: 39px;
   right: 35px;
   font-size: 25px;
+}
+.menu .menucard h3 {
+  font-size: 16px;
+  font-weight: 300;
+  position: relative;
+  margin: 40px 0 20px 0;
+}
+.menu .menucard h3::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+}
+.menu .menucard__div--light {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.menu .menucard__title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.menu .menucard__subtitle {
+  font-size: 15px;
+  font-weight: 300;
+}
+.menu .menucard__price {
+  font-size: 15px;
+  font-weight: 700;
+  position: absolute;
+  right: 20px;
+  bottom: 9px;
+}
+.menu .div__button--center {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+.menu .div__button--center .button {
+  font-weight: 500;
+  width: 185px;
 }
 
 /*# sourceMappingURL=index.css.map */

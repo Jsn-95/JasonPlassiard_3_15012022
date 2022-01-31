@@ -2,6 +2,7 @@
 @use "../utils/variables";
 @use "../utils/placeholders";
 @use "../components/arrow-left";
+@use "../components/button";
 
 .menu__header--shadow {
     box-shadow: none;
@@ -13,25 +14,75 @@
 
 .menu {
     background-color: #f3f3f3;
-    height: 1000px;
+    height: 1145px;
     border-radius: 40px 40px 0 0;
     margin-top: -60px;
-    border: 2px solid salmon;
+    padding: 35px 10px;
     position: relative;
 
     &__title {
+        margin-bottom: 40px;
         & h2 {
             font-family: variables.$police-title;
             font-size: 28px;
-            padding-top: 30px;
-            padding-left: 20px;
             @extend %font-weight;
         }
         & .fa-heart {
             position: absolute;
-            top: 34px;
+            top: 39px;
             right: 35px;
             font-size: 25px;
+        }
+    }
+
+    .menucard {
+        & h3 {
+            font-size: 16px;
+            font-weight: 300;
+            position: relative;
+            margin: 40px 0 20px 0;
+        }
+        & h3::before {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            width: 40px;
+            height: 3px;
+            background-color: variables.$color-tertiary;
+        }
+        &__div--light {
+            background-color: variables.$white;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 15px;
+            position: relative;
+            @extend %shadow;
+        }
+        &__title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        &__subtitle {
+            font-size: 15px;
+            font-weight: 300;
+        }
+        &__price {
+            font-size: 15px;
+            font-weight: 700;
+            position: absolute;
+            right: 20px;
+            bottom: 9px;
+        }
+    }
+    .div__button--center {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+
+        .button {
+            font-weight: 500;
+            width: 185px;
         }
     }
 }

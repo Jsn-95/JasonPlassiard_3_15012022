@@ -19,7 +19,7 @@
 }
 
 .menu {
-    @include mixins.menu(1170px);
+    @include mixins.menu(1160px);
 
     &__title {
         margin-bottom: 40px;

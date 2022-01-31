@@ -12,8 +12,4 @@
     cursor: pointer;
     @extend %shadow;
     @include mixins.gradient;
-
-    &:hover {
-        transform: scale(2);
-    }
 }

@@ -560,9 +560,6 @@ footer ul .fa-hands-helping {
   cursor: pointer;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
-.button:hover {
-  transform: scale(2);
-}
 
 .fa-arrow-left {
   position: absolute;
@@ -588,7 +585,7 @@ footer ul .fa-hands-helping {
 
 .menu {
   background-color: #f3f3f3;
-  height: 1145px;
+  height: 1170px;
   border-radius: 40px 40px 0 0;
   margin-top: -60px;
   padding: 35px 10px;
@@ -656,7 +653,7 @@ footer ul .fa-hands-helping {
 
 .menu__note {
   background-color: #f3f3f3;
-  height: 1220px;
+  height: 1240px;
   border-radius: 40px 40px 0 0;
   margin-top: -60px;
   padding: 35px 10px;

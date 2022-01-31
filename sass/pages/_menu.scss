@@ -19,7 +19,7 @@
 }
 
 .menu {
-    @include mixins.menu(1145px);
+    @include mixins.menu(1170px);
 
     &__title {
         margin-bottom: 40px;
@@ -89,5 +89,5 @@
 }
 
 .menu__note {
-    @include mixins.menu(1220px);
+    @include mixins.menu(1240px);
 }

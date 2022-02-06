@@ -2,14 +2,14 @@
 @use "../utils/placeholders";
 
 footer {
-    background-color: #363636;
+    background-color: variables.$blacklight;
     height: 200px;
     padding-top: 25px;
     padding-left: 25px;
 
     & h4 {
         font-family: variables.$police-title;
-        color: #f5f5f5;
+        color: variables.$whitesmoke;
         margin: 0;
         font-size: 20px;
         @extend %font-weight;
@@ -21,28 +21,28 @@ footer {
         position: relative;
 
         & li {
-            color: #e0e0e0;
+            color: variables.$graylightweight;
             font-size: 15px;
             font-weight: 500;
             margin-bottom: 7px;
         }
         & li a {
-            color: #e0e0e0;
+            color: variables.$graylightweight;
         }
 
         & .footer__span-ustensil {
             padding-left: 24px;
-            color: #fafafa;
+            color: variables.$graylightweight;
         }
 
         & .fa-utensils {
             font-size: 14px;
             position: absolute;
-            top: 3px;
+            top: 3%;
         }
 
         & .footer__span-help {
-            color: #fafafa;
+            color: variables.$graylightweight;
         }
 
         & .fa-hands-helping {

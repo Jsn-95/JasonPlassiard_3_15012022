@@ -1,7 +1,9 @@
+@use "../utils/variables";
+
 .fa-arrow-left {
     position: absolute;
-    left: 30px;
-    top: 24px;
-    color: #3f3f3f;
-    font-size: 23px;
+    left: 7%;
+    top: 40%;
+    color: variables.$blacklight;
+    font-size: 18px;
 }

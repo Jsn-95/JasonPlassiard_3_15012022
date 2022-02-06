@@ -7,16 +7,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
     height: 1080px;
+    margin-bottom: 30px;
 
     &__article {
-        @extend %shadow;
         background-color: variables.$white;
         height: 255px;
         width: 90%;
         border-radius: 20px;
         position: relative;
+        @include mixins.shadow(0, 5px, 5px, #d3d3d3);
     }
 
     &__image {
@@ -42,11 +42,19 @@
         font-weight: 300;
     }
 
-    & .fa-heart {
-        position: absolute;
-        right: 25px;
-        bottom: 27px;
+    & .far {
         font-size: 25px;
+        @include mixins.position-absolute(auto, 12%, 10%, auto);
+    }
+
+    & .fas {
+        @include mixins.position-absolute(auto, 11.6%, 9.7%, auto);
+        @include mixins.color-gradient(0);
+
+        &:hover {
+            @include mixins.color-gradient(1);
+            font-size: 27px;
+        }
     }
 
     & span {
@@ -59,7 +67,7 @@
         width: 85px;
         border-radius: 2px;
         position: absolute;
-        right: 15px;
-        top: 15px;
+        right: 5%;
+        top: 5%;
     }
 }

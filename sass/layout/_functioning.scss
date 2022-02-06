@@ -17,13 +17,20 @@
 
         & li {
             @extend %flex-center;
-            @extend %shadow;
-            background-color: #f5f5f5;
+            @include mixins.shadow(0, 5px, 5px, #d3d3d3);
+            background-color: variables.$whitesmoke;
             border-radius: 17px;
             height: 70px;
             width: 95%;
             text-align: center;
             position: relative;
+
+            &:active,
+            &:hover {
+                background-color: (
+                    lighten($color: variables.$color-primary, $amount: 35%)
+                );
+            }
         }
     }
 
@@ -34,7 +41,7 @@
         color: variables.$white;
         border-radius: 50%;
         position: absolute;
-        left: -10px;
+        left: -4%;
         padding-top: 5px;
         font-size: 15px;
     }
@@ -42,7 +49,12 @@
     & i {
         color: #818181;
         position: absolute;
-        left: 40px;
+        left: 12%;
+
+        &:active,
+        &:hover {
+            color: variables.$color-primary;
+        }
     }
 
     &__text {

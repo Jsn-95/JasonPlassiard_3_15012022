@@ -8,16 +8,18 @@
         background-color: #e7e7e7;
         height: 50px;
         font-weight: 500;
-        color: #3f3f3f;
+        color: variables.$blacklight;
 
         & i {
             position: absolute;
-            left: 100px;
+            left: 28%;
+            top: 11.2%;
+            font-size: 17px;
         }
     }
 
     &__reserve {
-        background-color: #f3f3f3;
+        background-color: variables.$whitesmokelight;
         height: 290px;
         text-align: center;
 

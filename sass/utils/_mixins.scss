@@ -1,18 +1,32 @@
 @use "../utils/variables";
 
-@mixin gradient {
-    background: linear-gradient(
-        to bottom right,
-        variables.$color-secondary,
-        variables.$color-primary
-    );
+@mixin background-gradient($opacity) {
+    opacity: $opacity;
+    background: variables.$background-gradient;
+}
+
+@mixin color-gradient($opacity) {
+    opacity: $opacity;
+    // color: variables.$color-gradient;
+}
+
+@mixin position-absolute($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
 }
 
 @mixin menu($height) {
-    background-color: #f3f3f3;
+    background-color: variables.$whitesmokelight;
     height: $height;
     border-radius: 40px 40px 0 0;
     margin-top: -60px;
-    padding: 35px 10px;
+    padding: 35px 15px;
     position: relative;
+}
+
+@mixin shadow($x, $y, $blur, $color) {
+    box-shadow: $x $y $blur $color;
 }

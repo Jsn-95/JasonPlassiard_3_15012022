@@ -8,8 +8,13 @@
     border-radius: 50px;
     border: none;
     color: variables.$white;
-    opacity: 1;
     cursor: pointer;
-    @extend %shadow;
-    @include mixins.gradient;
+    @include mixins.shadow(0, 5px, 5px, #d3d3d3);
+    @include mixins.background-gradient(1);
+
+    &:hover,
+    &:active {
+        @include mixins.background-gradient(0.8);
+        @include mixins.shadow(0, 5px, 5px, #aaaaaa);
+    }
 }

@@ -5,10 +5,6 @@
   align-items: center;
 }
 
-.menu .menucard__div--light, .button, .card__article, .functioning ul li, .header {
-  box-shadow: 0px 5px 5px #d3d3d3;
-}
-
 .menu__title h2, footer h4 {
   font-weight: 200;
 }
@@ -360,6 +356,7 @@ template {
 }
 
 .header {
+  box-shadow: 0 5px 5px #d3d3d3;
   position: relative;
 }
 .header h1 {
@@ -378,11 +375,13 @@ template {
   background-color: #e7e7e7;
   height: 50px;
   font-weight: 500;
-  color: #3f3f3f;
+  color: #363636;
 }
 .localisation__search i {
   position: absolute;
-  left: 100px;
+  left: 28%;
+  top: 11.2%;
+  font-size: 17px;
 }
 .localisation__reserve {
   background-color: #f3f3f3;
@@ -417,12 +416,16 @@ template {
   margin-bottom: 60px;
 }
 .functioning ul li {
+  box-shadow: 0 5px 5px #d3d3d3;
   background-color: #f5f5f5;
   border-radius: 17px;
   height: 70px;
   width: 95%;
   text-align: center;
   position: relative;
+}
+.functioning ul li:active, .functioning ul li:hover {
+  background-color: #f2eafb;
 }
 .functioning__number {
   height: 25px;
@@ -431,21 +434,24 @@ template {
   color: #ffffff;
   border-radius: 50%;
   position: absolute;
-  left: -10px;
+  left: -4%;
   padding-top: 5px;
   font-size: 15px;
 }
 .functioning i {
   color: #818181;
   position: absolute;
-  left: 40px;
+  left: 12%;
+}
+.functioning i:active, .functioning i:hover {
+  color: #9356dc;
 }
 .functioning__text {
   font-weight: 500;
 }
 
 .restaurants {
-  background-color: #e7e7e7;
+  background-color: #f3f3f3;
   height: 1250px;
 }
 .restaurants h2 {
@@ -480,15 +486,15 @@ footer ul li a {
 }
 footer ul .footer__span-ustensil {
   padding-left: 24px;
-  color: #fafafa;
+  color: #e0e0e0;
 }
 footer ul .fa-utensils {
   font-size: 14px;
   position: absolute;
-  top: 3px;
+  top: 3%;
 }
 footer ul .footer__span-help {
-  color: #fafafa;
+  color: #e0e0e0;
 }
 footer ul .fa-hands-helping {
   font-size: 12px;
@@ -501,8 +507,8 @@ footer ul .fa-hands-helping {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
   height: 1080px;
+  margin-bottom: 30px;
 }
 .card__article {
   background-color: #ffffff;
@@ -510,6 +516,7 @@ footer ul .fa-hands-helping {
   width: 90%;
   border-radius: 20px;
   position: relative;
+  box-shadow: 0 5px 5px #d3d3d3;
 }
 .card__image {
   border-radius: 20px 20px 0 0;
@@ -531,11 +538,25 @@ footer ul .fa-hands-helping {
   font-size: 17px;
   font-weight: 300;
 }
-.card .fa-heart {
-  position: absolute;
-  right: 25px;
-  bottom: 27px;
+.card .far {
   font-size: 25px;
+  position: absolute;
+  top: auto;
+  right: 12%;
+  bottom: 10%;
+  left: auto;
+}
+.card .fas {
+  position: absolute;
+  top: auto;
+  right: 11.6%;
+  bottom: 9.7%;
+  left: auto;
+  opacity: 0;
+}
+.card .fas:hover {
+  opacity: 1;
+  font-size: 27px;
 }
 .card span {
   background-color: #99e2d0;
@@ -546,8 +567,8 @@ footer ul .fa-hands-helping {
   width: 85px;
   border-radius: 2px;
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 5%;
+  top: 5%;
 }
 
 .button {
@@ -556,24 +577,30 @@ footer ul .fa-hands-helping {
   border-radius: 50px;
   border: none;
   color: #ffffff;
-  opacity: 1;
   cursor: pointer;
+  box-shadow: 0 5px 5px #d3d3d3;
+  opacity: 1;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
+}
+.button:hover, .button:active {
+  opacity: 0.8;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  box-shadow: 0 5px 5px #aaaaaa;
 }
 
 .fa-arrow-left {
   position: absolute;
-  left: 30px;
-  top: 24px;
-  color: #3f3f3f;
-  font-size: 23px;
+  left: 7%;
+  top: 40%;
+  color: #363636;
+  font-size: 18px;
 }
 
 .menu__header--shadow {
   box-shadow: none;
 }
 
-.menu__imagepalette {
+.menu__image {
   width: 100%;
 }
 
@@ -588,7 +615,7 @@ footer ul .fa-hands-helping {
   height: 1160px;
   border-radius: 40px 40px 0 0;
   margin-top: -60px;
-  padding: 35px 10px;
+  padding: 35px 15px;
   position: relative;
 }
 .menu__title {
@@ -597,23 +624,26 @@ footer ul .fa-hands-helping {
 .menu__title h2 {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
+  padding-left: 5px;
 }
 .menu__title .fa-heart {
   position: absolute;
-  top: 39px;
-  right: 35px;
-  font-size: 25px;
+  top: 3.3%;
+  right: 7%;
+  bottom: auto;
+  left: auto;
 }
 .menu .menucard h3 {
   font-size: 16px;
   font-weight: 300;
   position: relative;
+  padding-left: 5px;
   margin: 40px 0 20px 0;
 }
 .menu .menucard h3::before {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -45%;
   width: 40px;
   height: 3px;
   background-color: #99e2d0;
@@ -624,6 +654,7 @@ footer ul .fa-hands-helping {
   padding: 10px;
   margin-bottom: 15px;
   position: relative;
+  box-shadow: 0 5px 5px #d3d3d3;
 }
 .menu .menucard__title {
   font-size: 18px;
@@ -638,8 +669,8 @@ footer ul .fa-hands-helping {
   font-size: 15px;
   font-weight: 700;
   position: absolute;
-  right: 20px;
-  bottom: 9px;
+  right: 6%;
+  bottom: 15%;
 }
 .menu .div__button--center {
   display: flex;
@@ -647,16 +678,17 @@ footer ul .fa-hands-helping {
   margin-top: 60px;
 }
 .menu .div__button--center .button {
-  font-weight: 500;
   width: 185px;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .menu__note {
   background-color: #f3f3f3;
-  height: 1240px;
+  height: 1220px;
   border-radius: 40px 40px 0 0;
   margin-top: -60px;
-  padding: 35px 10px;
+  padding: 35px 15px;
   position: relative;
 }
 

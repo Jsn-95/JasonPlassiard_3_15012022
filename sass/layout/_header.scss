@@ -2,7 +2,7 @@
 @use "../utils/placeholders";
 
 .header {
-    @extend %shadow;
+    @include mixins.shadow(0, 5px, 5px, #d3d3d3);
     position: relative;
 
     & h1 {

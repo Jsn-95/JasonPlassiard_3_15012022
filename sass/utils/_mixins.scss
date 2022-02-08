@@ -30,3 +30,15 @@
 @mixin shadow($x, $y, $blur, $color) {
     box-shadow: $x $y $blur $color;
 }
+
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: map-get(variables.$breakpoints, desktop)) {
+        @content;
+    }
+}

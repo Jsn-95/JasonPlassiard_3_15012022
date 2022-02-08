@@ -1,5 +1,6 @@
 @use "../utils/variables";
 @use "../utils/placeholders";
+@use "../utils/mixins";
 
 footer {
     background-color: variables.$blacklight;
@@ -14,6 +15,10 @@ footer {
         font-size: 20px;
         @extend %font-weight;
         margin-bottom: 20px;
+
+        @include mixins.tablet {
+            font-size: 23px;
+        }
     }
 
     & ul {
@@ -25,6 +30,10 @@ footer {
             font-size: 15px;
             font-weight: 500;
             margin-bottom: 7px;
+
+            @include mixins.tablet {
+                font-size: 18px;
+            }
         }
         & li a {
             color: variables.$graylightweight;
@@ -37,8 +46,11 @@ footer {
 
         & .fa-utensils {
             font-size: 14px;
-            position: absolute;
-            top: 3%;
+            @include mixins.position-absolute(3%, auto, auto, auto);
+
+            @include mixins.tablet {
+                font-size: 17px;
+            }
         }
 
         & .footer__span-help {
@@ -49,6 +61,10 @@ footer {
             font-size: 12px;
             padding-right: 5px;
             transform: rotate(-10deg);
+
+            @include mixins.tablet {
+                font-size: 17px;
+            }
         }
     }
 }

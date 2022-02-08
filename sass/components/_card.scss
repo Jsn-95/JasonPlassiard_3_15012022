@@ -10,6 +10,13 @@
     height: 1080px;
     margin-bottom: 30px;
 
+    @include mixins.tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: 600px;
+    }
+
     &__article {
         background-color: variables.$white;
         height: 255px;
@@ -17,6 +24,10 @@
         border-radius: 20px;
         position: relative;
         @include mixins.shadow(0, 5px, 5px, #d3d3d3);
+
+        @include mixins.tablet {
+            width: 40%;
+        }
     }
 
     &__image {
@@ -45,15 +56,15 @@
     & .far {
         font-size: 25px;
         @include mixins.position-absolute(auto, 12%, 10%, auto);
-    }
-
-    & .fas {
-        @include mixins.position-absolute(auto, 11.6%, 9.7%, auto);
-        @include mixins.color-gradient(0);
-
-        &:hover {
-            @include mixins.color-gradient(1);
+        transition: all ease 0.5s;
+        &:hover,
+        &:active {
             font-size: 27px;
+            font-weight: 700;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: variables.$background-gradient;
         }
     }
 
@@ -66,8 +77,6 @@
         height: 29px;
         width: 85px;
         border-radius: 2px;
-        position: absolute;
-        right: 5%;
-        top: 5%;
+        @include mixins.position-absolute(5%, 5%, auto, auto);
     }
 }

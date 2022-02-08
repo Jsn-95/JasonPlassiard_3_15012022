@@ -1,9 +1,8 @@
 @use "../utils/variables";
+@use "../utils/mixins";
 
 .fa-arrow-left {
-    position: absolute;
-    left: 7%;
-    top: 40%;
+    @include mixins.position-absolute(40%, auto, auto, 7%);
     color: variables.$blacklight;
     font-size: 18px;
 }

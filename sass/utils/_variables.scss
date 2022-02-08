@@ -17,8 +17,13 @@ $background-gradient: linear-gradient(
     $color-primary
 );
 
-// $color-gradient: linear-gradient(180deg, $color-secondary, $color-primary);
-
 // POLICE
 
 $police-title: "Shrikhand", cursive;
+
+// BREAKPOINTS
+
+$breakpoints: (
+    tablet: 768px,
+    desktop: 1200px,
+);

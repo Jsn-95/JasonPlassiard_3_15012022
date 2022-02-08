@@ -1,8 +1,11 @@
 @use "../utils/variables";
 @use "../utils/placeholders";
+@use "../utils/mixins";
 
 .localisation {
     margin-bottom: 50px;
+    position: relative;
+
     &__search {
         @extend %flex-center;
         background-color: #e7e7e7;
@@ -11,9 +14,7 @@
         color: variables.$blacklight;
 
         & i {
-            position: absolute;
-            left: 28%;
-            top: 11.2%;
+            padding-right: 10px;
             font-size: 17px;
         }
     }

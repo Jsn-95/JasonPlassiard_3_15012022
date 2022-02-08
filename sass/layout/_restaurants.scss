@@ -1,9 +1,14 @@
 @use "../utils/placeholders";
 @use "../utils/variables";
+@use "../utils/mixins";
 
 .restaurants {
     background-color: variables.$whitesmokelight;
     height: 1250px;
+
+    @include mixins.tablet {
+        height: 800px;
+    }
 
     & h2 {
         padding: 50px 0 20px 20px;

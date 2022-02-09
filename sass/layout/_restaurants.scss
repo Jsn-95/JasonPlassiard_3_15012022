@@ -6,7 +6,7 @@
     background-color: variables.$whitesmokelight;
     height: 1250px;
 
-    @include mixins.tablet {
+    @include mixins.desktop {
         height: 800px;
     }
 

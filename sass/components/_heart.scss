@@ -1,0 +1,15 @@
+@use "../utils/variables";
+
+.far {
+    font-size: 25px;
+    transition: all ease 0.5s;
+    &:hover,
+    &:active {
+        font-size: 27px;
+        font-weight: 700;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: variables.$gradient-heart;
+    }
+}

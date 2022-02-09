@@ -2,12 +2,7 @@
 
 @mixin background-gradient($opacity) {
     opacity: $opacity;
-    background: variables.$background-gradient;
-}
-
-@mixin color-gradient($opacity) {
-    opacity: $opacity;
-    // color: variables.$color-gradient;
+    background: variables.$gradient-button;
 }
 
 @mixin position-absolute($top, $right, $bottom, $left) {
@@ -18,12 +13,12 @@
     left: $left;
 }
 
-@mixin menu($height) {
+@mixin menu($height, $padding) {
     background-color: variables.$whitesmokelight;
     height: $height;
     border-radius: 40px 40px 0 0;
     margin-top: -60px;
-    padding: 35px 15px;
+    padding: $padding;
     position: relative;
 }
 
@@ -32,7 +27,7 @@
 }
 
 @mixin tablet {
-    @media (min-width: 768px) and (max-width: 1200px) {
+    @media (min-width: map-get(variables.$breakpoints, tablet)) and (max-width: map-get(variables.$breakpoints, desktop)) {
         @content;
     }
 }

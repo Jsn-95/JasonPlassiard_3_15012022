@@ -423,17 +423,18 @@ template {
   height: 280px;
   padding-left: 30px;
   margin-bottom: 60px;
-  position: relative;
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   .functioning ul {
-    padding-left: 150px;
+    padding: 0 100px;
   }
 }
 @media (min-width: 1200px) {
   .functioning ul {
-    padding-left: 150px;
     flex-direction: row;
+    align-items: center;
+    height: 150px;
+    padding: 0 20px;
   }
 }
 .functioning ul li {
@@ -443,9 +444,23 @@ template {
   height: 70px;
   width: 95%;
   text-align: center;
+  cursor: pointer;
+  position: relative;
 }
 .functioning ul li:active, .functioning ul li:hover {
   background-color: #f2eafb;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .functioning ul li {
+    padding: 0 100px;
+  }
+}
+@media (min-width: 1200px) {
+  .functioning ul li {
+    flex-direction: row;
+    height: 80px;
+    width: 30%;
+  }
 }
 .functioning__number {
   height: 25px;
@@ -459,16 +474,7 @@ template {
   top: auto;
   right: auto;
   bottom: auto;
-  left: 18px;
-}
-@media (min-width: 768px) and (max-width: 1200px) {
-  .functioning__number {
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: 137px;
-  }
+  left: -13px;
 }
 .functioning i {
   color: #818181;
@@ -476,15 +482,11 @@ template {
   top: auto;
   right: auto;
   bottom: auto;
-  left: 67px;
+  left: 36px;
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 1200px) {
   .functioning i {
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: 115px;
+    font-size: 20px;
   }
 }
 .functioning i:active, .functioning i:hover {
@@ -508,7 +510,7 @@ template {
   background-color: #f3f3f3;
   height: 1250px;
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 1200px) {
   .restaurants {
     height: 800px;
   }
@@ -535,9 +537,21 @@ footer h4 {
     font-size: 23px;
   }
 }
+@media (min-width: 1200px) {
+  footer h4 {
+    font-size: 26px;
+  }
+}
 footer ul {
   padding-left: 0;
   position: relative;
+}
+@media (min-width: 1200px) {
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
 }
 footer ul li {
   color: #e0e0e0;
@@ -548,6 +562,11 @@ footer ul li {
 @media (min-width: 768px) and (max-width: 1200px) {
   footer ul li {
     font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  footer ul li {
+    font-size: 20px;
   }
 }
 footer ul li a {
@@ -570,6 +589,11 @@ footer ul .fa-utensils {
     font-size: 17px;
   }
 }
+@media (min-width: 1200px) {
+  footer ul .fa-utensils {
+    font-size: 19px;
+  }
+}
 footer ul .footer__span-help {
   color: #e0e0e0;
 }
@@ -583,6 +607,11 @@ footer ul .fa-hands-helping {
     font-size: 17px;
   }
 }
+@media (min-width: 1200px) {
+  footer ul .fa-hands-helping {
+    font-size: 20px;
+  }
+}
 
 .card {
   display: flex;
@@ -592,12 +621,12 @@ footer ul .fa-hands-helping {
   height: 1080px;
   margin-bottom: 30px;
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 1200px) {
   .card {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 600px;
+    height: 680px;
   }
 }
 .card__article {
@@ -606,11 +635,14 @@ footer ul .fa-hands-helping {
   width: 90%;
   border-radius: 20px;
   position: relative;
-  box-shadow: 0 5px 5px #d3d3d3;
+  transition-property: transform;
 }
-@media (min-width: 768px) and (max-width: 1200px) {
+.card__article:hover {
+  transform: rotate(360deg);
+}
+@media (min-width: 1200px) {
   .card__article {
-    width: 40%;
+    width: 45%;
   }
 }
 .card__image {
@@ -634,21 +666,11 @@ footer ul .fa-hands-helping {
   font-weight: 300;
 }
 .card .far {
-  font-size: 25px;
   position: absolute;
   top: auto;
   right: 12%;
   bottom: 10%;
   left: auto;
-  transition: all ease 0.5s;
-}
-.card .far:hover, .card .far:active {
-  font-size: 27px;
-  font-weight: 700;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 .card span {
   background-color: #99e2d0;
@@ -682,6 +704,19 @@ footer ul .fa-hands-helping {
   box-shadow: 0 5px 5px #aaaaaa;
 }
 
+.far {
+  font-size: 25px;
+  transition: all ease 0.5s;
+}
+.far:hover, .far:active {
+  font-size: 27px;
+  font-weight: 700;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom right, #9356dc, #ff79da);
+}
+
 .fa-arrow-left {
   position: absolute;
   top: 40%;
@@ -691,6 +726,16 @@ footer ul .fa-hands-helping {
   color: #363636;
   font-size: 18px;
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .fa-arrow-left {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .fa-arrow-left {
+    font-size: 27px;
+  }
+}
 
 .menu__header--shadow {
   box-shadow: none;
@@ -698,12 +743,33 @@ footer ul .fa-hands-helping {
 
 .menu__image {
   width: 100%;
+  object-fit: cover;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .menu__image {
+    height: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  .menu__image {
+    height: 500px;
+  }
 }
 
 .menu__imagenote {
   width: 100%;
   height: 250px;
   object-fit: cover;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .menu__imagenote {
+    height: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  .menu__imagenote {
+    height: 500px;
+  }
 }
 
 .menu {
@@ -714,6 +780,26 @@ footer ul .fa-hands-helping {
   padding: 35px 15px;
   position: relative;
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .menu {
+    background-color: #f3f3f3;
+    height: 1160px;
+    border-radius: 40px 40px 0 0;
+    margin-top: -60px;
+    padding: 40px 100px;
+    position: relative;
+  }
+}
+@media (min-width: 1200px) {
+  .menu {
+    background-color: #f3f3f3;
+    height: 1160px;
+    border-radius: 40px 40px 0 0;
+    margin-top: -60px;
+    padding: 40px 300px;
+    position: relative;
+  }
+}
 .menu__title {
   margin-bottom: 40px;
 }
@@ -722,12 +808,30 @@ footer ul .fa-hands-helping {
   font-size: 28px;
   padding-left: 5px;
 }
-.menu__title .fa-heart {
+.menu__title .far {
   position: absolute;
-  top: 3.3%;
-  right: 7%;
+  top: 39px;
+  right: 38px;
   bottom: auto;
   left: auto;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .menu__title .far {
+    position: absolute;
+    top: 44px;
+    right: 128px;
+    bottom: auto;
+    left: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .menu__title .far {
+    position: absolute;
+    top: 39px;
+    right: 358px;
+    bottom: auto;
+    left: auto;
+  }
 }
 .menu .menucard h3 {
   font-size: 16px;
@@ -791,6 +895,26 @@ footer ul .fa-hands-helping {
   margin-top: -60px;
   padding: 35px 15px;
   position: relative;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .menu__note {
+    background-color: #f3f3f3;
+    height: 1220px;
+    border-radius: 40px 40px 0 0;
+    margin-top: -60px;
+    padding: 40px 100px;
+    position: relative;
+  }
+}
+@media (min-width: 1200px) {
+  .menu__note {
+    background-color: #f3f3f3;
+    height: 1220px;
+    border-radius: 40px 40px 0 0;
+    margin-top: -60px;
+    padding: 40px 300px;
+    position: relative;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

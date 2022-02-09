@@ -19,11 +19,21 @@ footer {
         @include mixins.tablet {
             font-size: 23px;
         }
+
+        @include mixins.desktop {
+            font-size: 26px;
+        }
     }
 
     & ul {
         padding-left: 0;
         position: relative;
+
+        @include mixins.desktop {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
 
         & li {
             color: variables.$graylightweight;
@@ -33,6 +43,10 @@ footer {
 
             @include mixins.tablet {
                 font-size: 18px;
+            }
+
+            @include mixins.desktop {
+                font-size: 20px;
             }
         }
         & li a {
@@ -51,6 +65,10 @@ footer {
             @include mixins.tablet {
                 font-size: 17px;
             }
+
+            @include mixins.desktop {
+                font-size: 19px;
+            }
         }
 
         & .footer__span-help {
@@ -64,6 +82,10 @@ footer {
 
             @include mixins.tablet {
                 font-size: 17px;
+            }
+
+            @include mixins.desktop {
+                font-size: 20px;
             }
         }
     }

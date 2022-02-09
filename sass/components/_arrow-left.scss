@@ -5,4 +5,12 @@
     @include mixins.position-absolute(40%, auto, auto, 7%);
     color: variables.$blacklight;
     font-size: 18px;
+
+    @include mixins.tablet {
+        font-size: 24px;
+    }
+
+    @include mixins.desktop {
+        font-size: 27px;
+    }
 }

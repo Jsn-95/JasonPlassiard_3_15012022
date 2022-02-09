@@ -14,15 +14,16 @@
         height: 280px;
         padding-left: 30px;
         margin-bottom: 60px;
-        position: relative;
 
         @include mixins.tablet {
-            padding-left: 150px;
+            padding: 0 100px;
         }
 
         @include mixins.desktop {
-            padding-left: 150px;
             flex-direction: row;
+            align-items: center;
+            height: 150px;
+            padding: 0 20px;
         }
 
         & li {
@@ -33,12 +34,24 @@
             height: 70px;
             width: 95%;
             text-align: center;
+            cursor: pointer;
+            position: relative;
 
             &:active,
             &:hover {
                 background-color: (
                     lighten($color: variables.$color-primary, $amount: 35%)
                 );
+            }
+
+            @include mixins.tablet {
+                padding: 0 100px;
+            }
+
+            @include mixins.desktop {
+                flex-direction: row;
+                height: 80px;
+                width: 30%;
             }
         }
     }
@@ -51,19 +64,15 @@
         border-radius: 50%;
         padding-top: 5px;
         font-size: 15px;
-        @include mixins.position-absolute(auto, auto, auto, 18px);
-
-        @include mixins.tablet {
-            @include mixins.position-absolute(auto, auto, auto, 137px);
-        }
+        @include mixins.position-absolute(auto, auto, auto, -13px);
     }
 
     & i {
         color: #818181;
-        @include mixins.position-absolute(auto, auto, auto, 67px);
+        @include mixins.position-absolute(auto, auto, auto, 36px);
 
-        @include mixins.tablet {
-            @include mixins.position-absolute(auto, auto, auto, 115px);
+        @include mixins.desktop {
+            font-size: 20px;
         }
 
         &:active,

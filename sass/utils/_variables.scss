@@ -11,10 +11,16 @@ $graylightweight: #e0e0e0;
 
 // GRADIENT
 
-$background-gradient: linear-gradient(
+$gradient-button: linear-gradient(
     to bottom right,
     $color-secondary,
     $color-primary
+);
+
+$gradient-heart: linear-gradient(
+    to bottom right,
+    $color-primary,
+    $color-secondary
 );
 
 // POLICE

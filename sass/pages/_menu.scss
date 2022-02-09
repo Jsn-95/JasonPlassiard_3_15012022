@@ -10,16 +10,41 @@
 
 .menu__image {
     width: 100%;
+    object-fit: cover;
+
+    @include mixins.tablet {
+        height: 350px;
+    }
+
+    @include mixins.desktop {
+        height: 500px;
+    }
 }
 
 .menu__imagenote {
     width: 100%;
     height: 250px;
     object-fit: cover;
+
+    @include mixins.tablet {
+        height: 350px;
+    }
+
+    @include mixins.desktop {
+        height: 500px;
+    }
 }
 
 .menu {
-    @include mixins.menu(1160px);
+    @include mixins.menu(1160px, 35px 15px);
+
+    @include mixins.tablet {
+        @include mixins.menu(1160px, 40px 100px);
+    }
+
+    @include mixins.desktop {
+        @include mixins.menu(1160px, 40px 300px);
+    }
 
     &__title {
         margin-bottom: 40px;
@@ -29,8 +54,16 @@
             padding-left: 5px;
             @extend %font-weight;
         }
-        & .fa-heart {
-            @include mixins.position-absolute(3.3%, 7%, auto, auto);
+        & .far {
+            @include mixins.position-absolute(39px, 38px, auto, auto);
+
+            @include mixins.tablet {
+                @include mixins.position-absolute(44px, 128px, auto, auto);
+            }
+
+            @include mixins.desktop {
+                @include mixins.position-absolute(39px, 358px, auto, auto);
+            }
         }
     }
 
@@ -47,7 +80,6 @@
             width: 40px;
             height: 3px;
             @include mixins.position-absolute(auto, auto, -45%, auto);
-
             background-color: variables.$color-tertiary;
         }
         &__div--light {
@@ -87,5 +119,13 @@
 }
 
 .menu__note {
-    @include mixins.menu(1220px);
+    @include mixins.menu(1220px, 35px 15px);
+
+    @include mixins.tablet {
+        @include mixins.menu(1220px, 40px 100px);
+    }
+
+    @include mixins.desktop {
+        @include mixins.menu(1220px, 40px 300px);
+    }
 }

@@ -10,11 +10,11 @@
     height: 1080px;
     margin-bottom: 30px;
 
-    @include mixins.tablet {
+    @include mixins.desktop {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        height: 600px;
+        height: 680px;
     }
 
     &__article {
@@ -23,10 +23,14 @@
         width: 90%;
         border-radius: 20px;
         position: relative;
-        @include mixins.shadow(0, 5px, 5px, #d3d3d3);
+        transition-property: transform;
 
-        @include mixins.tablet {
-            width: 40%;
+        &:hover {
+            transform: rotate(360deg);
+        }
+
+        @include mixins.desktop {
+            width: 45%;
         }
     }
 
@@ -54,18 +58,7 @@
     }
 
     & .far {
-        font-size: 25px;
         @include mixins.position-absolute(auto, 12%, 10%, auto);
-        transition: all ease 0.5s;
-        &:hover,
-        &:active {
-            font-size: 27px;
-            font-weight: 700;
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: variables.$background-gradient;
-        }
     }
 
     & span {

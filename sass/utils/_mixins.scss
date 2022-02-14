@@ -26,6 +26,16 @@
     box-shadow: $x $y $blur $color;
 }
 
+@mixin border-spinner($inset, $height, $width, $border-top-color) {
+    position: fixed;
+    inset: $inset;
+    height: $height;
+    width: $width;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    border-top-color: $border-top-color;
+}
+
 @mixin tablet {
     @media (min-width: map-get(variables.$breakpoints, tablet)) and (max-width: map-get(variables.$breakpoints, desktop)) {
         @content;

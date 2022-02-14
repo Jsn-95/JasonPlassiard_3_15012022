@@ -1,5 +1,71 @@
 @use "../utils/mixins";
 @use "../utils/placeholders";
+@use "../utils/variables";
+
+// ANIMATION LOADING
+
+.loading {
+    background-color: variables.$white;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    @extend %flex-center;
+    animation: ghost 2.5s forwards;
+
+    &__spinner {
+        @include mixins.border-spinner(
+            auto,
+            200px,
+            200px,
+            variables.$color-primary
+        );
+        animation: spin 2s linear infinite;
+
+        &::before {
+            content: "";
+            @include mixins.border-spinner(
+                30.3px,
+                120px,
+                120px,
+                variables.$color-secondary
+            );
+            animation: spin 2.5s linear infinite forwards;
+        }
+
+        &::after {
+            content: "";
+            @include mixins.border-spinner(
+                65px,
+                50px,
+                50px,
+                variables.$color-tertiary
+            );
+            animation: spin 2s linear infinite;
+        }
+    }
+}
+
+@keyframes ghost {
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+// HEADER
 
 .header {
     @include mixins.shadow(0, 5px, 5px, #d3d3d3);

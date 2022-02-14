@@ -17,33 +17,19 @@
     }
 
     @include mixins.desktop {
-        height: 500px;
-    }
-}
-
-.menu__imagenote {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-
-    @include mixins.tablet {
-        height: 350px;
-    }
-
-    @include mixins.desktop {
-        height: 500px;
+        height: 400px;
     }
 }
 
 .menu {
-    @include mixins.menu(1160px, 35px 15px);
+    @include mixins.menu(1220px, 35px 15px);
 
     @include mixins.tablet {
-        @include mixins.menu(1160px, 40px 100px);
+        @include mixins.menu(1200px, 35px 80px);
     }
 
     @include mixins.desktop {
-        @include mixins.menu(1160px, 40px 300px);
+        @include mixins.menu(700px, 35px 15px);
     }
 
     &__title {
@@ -55,19 +41,26 @@
             @extend %font-weight;
         }
         & .far {
-            @include mixins.position-absolute(39px, 38px, auto, auto);
+            @include mixins.position-absolute(40px, 38px, auto, auto);
+        }
 
-            @include mixins.tablet {
-                @include mixins.position-absolute(44px, 128px, auto, auto);
-            }
+        @include mixins.desktop {
+            display: flex;
+            justify-content: center;
+        }
+    }
 
-            @include mixins.desktop {
-                @include mixins.position-absolute(39px, 358px, auto, auto);
-            }
+    .menucard__all--flex {
+        @include mixins.desktop {
+            display: flex;
+            justify-content: space-around;
         }
     }
 
     .menucard {
+        @include mixins.desktop {
+            width: 30%;
+        }
         & h3 {
             font-size: 16px;
             font-weight: 300;
@@ -82,13 +75,20 @@
             @include mixins.position-absolute(auto, auto, -45%, auto);
             background-color: variables.$color-tertiary;
         }
-        &__div--light {
+        &__article {
             background-color: variables.$white;
             border-radius: 10px;
             padding: 10px;
             margin-bottom: 15px;
             position: relative;
             @include mixins.shadow(0, 5px, 5px, #d3d3d3);
+            width: 100%;
+            transition-property: width;
+            transition-duration: 500ms;
+
+            &:hover {
+                width: 50%;
+            }
         }
         &__title {
             font-size: 18px;
@@ -118,14 +118,47 @@
     }
 }
 
-.menu__note {
-    @include mixins.menu(1220px, 35px 15px);
+.appear1 {
+    animation: appear 800ms ease-in-out 300ms forwards;
+    @extend %opacity-0;
+}
+.appear2 {
+    animation: appear 800ms ease-in-out 500ms forwards;
+    @extend %opacity-0;
+}
+.appear3 {
+    animation: appear 800ms ease-in-out 700ms forwards;
+    @extend %opacity-0;
+}
+.appear4 {
+    animation: appear 800ms ease-in-out 900ms forwards;
+    @extend %opacity-0;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// MENU : LA NOTE ENCHANTEE
+
+.menu__imagenote {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 
     @include mixins.tablet {
-        @include mixins.menu(1220px, 40px 100px);
+        height: 300px;
     }
 
     @include mixins.desktop {
-        @include mixins.menu(1220px, 40px 300px);
+        height: 350px;
     }
 }

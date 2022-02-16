@@ -5,22 +5,23 @@
 .localisation {
     margin-bottom: 50px;
     position: relative;
-
     &__search {
-        @extend %flex-center;
         background-color: #e7e7e7;
         height: 50px;
         font-weight: 500;
         color: variables.$blacklight;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
 
         & i {
-            padding-right: 10px;
-            font-size: 17px;
+            margin-right: 10px;
+            font-size: 16px;
         }
     }
 
     &__reserve {
-        background-color: variables.$whitesmokelight;
+        background-color: variables.$whitesmoke;
         height: 290px;
         text-align: center;
 

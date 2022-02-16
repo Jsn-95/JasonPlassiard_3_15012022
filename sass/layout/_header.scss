@@ -2,6 +2,30 @@
 @use "../utils/placeholders";
 @use "../utils/variables";
 
+// HEADER
+
+.header {
+    @include mixins.shadow(0, 3px, 5px, variables.$lightgray);
+    position: relative;
+    z-index: 1;
+
+    & h1 {
+        text-align: center;
+        padding: 20px 0 5px 0;
+        margin: 0;
+        & img {
+            width: 45%;
+
+            @include mixins.tablet {
+                width: 30%;
+            }
+
+            @include mixins.desktop {
+                width: 20%;
+            }
+        }
+    }
+}
 // ANIMATION LOADING
 
 .loading {
@@ -20,7 +44,7 @@
             200px,
             variables.$color-primary
         );
-        animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite forwards;
 
         &::before {
             content: "";
@@ -41,7 +65,7 @@
                 50px,
                 variables.$color-tertiary
             );
-            animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite forwards;
         }
     }
 }
@@ -52,7 +76,7 @@
     }
     100% {
         opacity: 0;
-        z-index: 0;
+        z-index: -1;
     }
 }
 
@@ -63,28 +87,6 @@
 
     to {
         transform: rotate(360deg);
-    }
-}
-// HEADER
-
-.header {
-    @include mixins.shadow(0, 5px, 5px, #d3d3d3);
-    position: relative;
-
-    & h1 {
-        text-align: center;
-        padding: 20px 0 3px 0;
-        margin: 0;
-        & img {
-            width: 40%;
-
-            @include mixins.tablet {
-                width: 30%;
-            }
-
-            @include mixins.desktop {
-                width: 20%;
-            }
-        }
+        z-index: -1;
     }
 }

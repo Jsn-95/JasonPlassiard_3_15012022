@@ -67,6 +67,10 @@
         @include mixins.position-absolute(auto, auto, auto, -13px);
     }
 
+    .functioning__number + .fa-mobile-alt {
+        font-size: 21px;
+    }
+
     & i {
         color: #818181;
         @include mixins.position-absolute(auto, auto, auto, 36px);

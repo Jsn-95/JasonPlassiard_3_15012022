@@ -76,6 +76,8 @@
             background-color: variables.$color-tertiary;
         }
         &__article {
+            height: 65px;
+            width: 300px;
             background-color: variables.$white;
             border-radius: 10px;
             padding: 10px;
@@ -85,11 +87,28 @@
             width: 100%;
             transition-property: width;
             transition-duration: 500ms;
+            overflow: hidden;
 
-            &:hover {
-                width: 50%;
+            &:hover .menucard__subtitle {
+                width: 210px;
+            }
+
+            &:hover .menucard__price {
+                right: 60px;
+                @include mixins.tablet {
+                    right: 70px;
+                }
+            }
+
+            &:hover .menucard__check {
+                right: 0px;
+            }
+
+            &:hover .menucard__check > i {
+                animation: rotate 500ms ease-in forwards;
             }
         }
+
         &__title {
             font-size: 18px;
             font-weight: 500;
@@ -97,12 +116,51 @@
         }
         &__subtitle {
             font-size: 15px;
-            font-weight: 300;
+            font-weight: 400;
+            height: 18px;
+            width: 280px;
+            transition: 500ms;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
         &__price {
             font-size: 15px;
             font-weight: 700;
-            @include mixins.position-absolute(auto, 6%, 15%, auto);
+            width: 40px;
+            transition: 500ms;
+            @include mixins.position-absolute(auto, 0, 10px, auto);
+        }
+
+        &__check {
+            background-color: variables.$color-tertiary;
+            height: 65px;
+            width: 55px;
+            font-size: 20px;
+            position: absolute;
+            top: 0;
+            right: -70px;
+            transition: 500ms;
+            @include mixins.tablet {
+                width: 70px;
+            }
+            & i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 65px;
+                color: variables.$white;
+                font-size: 20px;
+            }
+        }
+    }
+    @keyframes rotate {
+        from {
+            transform: rotate(0);
+        }
+
+        to {
+            transform: rotate(360deg);
         }
     }
     .div__button--center {

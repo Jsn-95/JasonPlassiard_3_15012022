@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-.card span, .functioning ul li, .localisation__search, .loading {
+.card span, .functioning ul li, .loading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,6 +359,30 @@ template {
   font-family: "Roboto", sans-serif;
 }
 
+.header {
+  box-shadow: 0 3px 5px #d3d3d3;
+  position: relative;
+  z-index: 1;
+}
+.header h1 {
+  text-align: center;
+  padding: 20px 0 5px 0;
+  margin: 0;
+}
+.header h1 img {
+  width: 45%;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header h1 img {
+    width: 30%;
+  }
+}
+@media (min-width: 1200px) {
+  .header h1 img {
+    width: 20%;
+  }
+}
+
 .loading {
   background-color: #ffffff;
   height: 100vh;
@@ -375,7 +399,7 @@ template {
   border: 5px solid transparent;
   border-radius: 50%;
   border-top-color: #9356dc;
-  animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite forwards;
 }
 .loading__spinner::before {
   content: "";
@@ -397,7 +421,7 @@ template {
   border: 5px solid transparent;
   border-radius: 50%;
   border-top-color: #99e2d0;
-  animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite forwards;
 }
 
 @keyframes ghost {
@@ -406,7 +430,7 @@ template {
   }
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
   }
 }
 @keyframes spin {
@@ -415,31 +439,9 @@ template {
   }
   to {
     transform: rotate(360deg);
+    z-index: -1;
   }
 }
-.header {
-  box-shadow: 0 5px 5px #d3d3d3;
-  position: relative;
-}
-.header h1 {
-  text-align: center;
-  padding: 20px 0 3px 0;
-  margin: 0;
-}
-.header h1 img {
-  width: 40%;
-}
-@media (min-width: 768px) and (max-width: 1200px) {
-  .header h1 img {
-    width: 30%;
-  }
-}
-@media (min-width: 1200px) {
-  .header h1 img {
-    width: 20%;
-  }
-}
-
 .localisation {
   margin-bottom: 50px;
   position: relative;
@@ -449,13 +451,16 @@ template {
   height: 50px;
   font-weight: 500;
   color: #363636;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 .localisation__search i {
-  padding-right: 10px;
-  font-size: 17px;
+  margin-right: 10px;
+  font-size: 16px;
 }
 .localisation__reserve {
-  background-color: #f3f3f3;
+  background-color: #f5f5f5;
   height: 290px;
   text-align: center;
 }
@@ -533,18 +538,15 @@ template {
   padding-top: 5px;
   font-size: 15px;
   position: absolute;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: -13px;
+  inset: auto auto auto -13px;
+}
+.functioning .functioning__number + .fa-mobile-alt {
+  font-size: 21px;
 }
 .functioning i {
   color: #818181;
   position: absolute;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: 36px;
+  inset: auto auto auto 36px;
 }
 @media (min-width: 1200px) {
   .functioning i {
@@ -601,7 +603,7 @@ footer h4 {
 }
 @media (min-width: 1200px) {
   footer h4 {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 footer ul {
@@ -621,14 +623,9 @@ footer ul li {
   font-weight: 500;
   margin-bottom: 7px;
 }
-@media (min-width: 768px) and (max-width: 1200px) {
-  footer ul li {
-    font-size: 18px;
-  }
-}
 @media (min-width: 1200px) {
   footer ul li {
-    font-size: 20px;
+    font-size: 17px;
   }
 }
 footer ul li a {
@@ -641,10 +638,7 @@ footer ul .footer__span-ustensil {
 footer ul .fa-utensils {
   font-size: 14px;
   position: absolute;
-  top: 3%;
-  right: auto;
-  bottom: auto;
-  left: auto;
+  inset: 3% auto auto auto;
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   footer ul .fa-utensils {
@@ -703,11 +697,6 @@ footer ul .fa-hands-helping {
   transform: scale(0.9);
 }
 @media (min-width: 1200px) {
-  .card__article:hover {
-    transform: scale(1.1);
-  }
-}
-@media (min-width: 1200px) {
   .card__article {
     width: 45%;
   }
@@ -734,24 +723,18 @@ footer ul .fa-hands-helping {
 }
 .card .far {
   position: absolute;
-  top: auto;
-  right: 12%;
-  bottom: 10%;
-  left: auto;
+  inset: auto 12% 10% auto;
 }
 .card span {
   background-color: #99e2d0;
-  color: #1b6150;
+  color: #2a947a;
   font-size: 15px;
   font-weight: 500;
   height: 29px;
   width: 85px;
   border-radius: 2px;
   position: absolute;
-  top: 5%;
-  right: 5%;
-  bottom: auto;
-  left: auto;
+  inset: 5% 5% auto auto;
 }
 
 .button {
@@ -786,10 +769,7 @@ footer ul .fa-hands-helping {
 
 .fa-arrow-left {
   position: absolute;
-  top: 40%;
-  right: auto;
-  bottom: auto;
-  left: 7%;
+  inset: 40% auto auto 7%;
   color: #363636;
   font-size: 18px;
 }
@@ -861,10 +841,7 @@ footer ul .fa-hands-helping {
 }
 .menu__title .far {
   position: absolute;
-  top: 40px;
-  right: 38px;
-  bottom: auto;
-  left: auto;
+  inset: 40px 38px auto auto;
 }
 @media (min-width: 1200px) {
   .menu__title {
@@ -895,13 +872,12 @@ footer ul .fa-hands-helping {
   width: 40px;
   height: 3px;
   position: absolute;
-  top: auto;
-  right: auto;
-  bottom: -45%;
-  left: auto;
+  inset: auto auto -45% auto;
   background-color: #99e2d0;
 }
 .menu .menucard__article {
+  height: 65px;
+  width: 300px;
   background-color: #ffffff;
   border-radius: 10px;
   padding: 10px;
@@ -911,9 +887,24 @@ footer ul .fa-hands-helping {
   width: 100%;
   transition-property: width;
   transition-duration: 500ms;
+  overflow: hidden;
 }
-.menu .menucard__article:hover {
-  width: 50%;
+.menu .menucard__article:hover .menucard__subtitle {
+  width: 210px;
+}
+.menu .menucard__article:hover .menucard__price {
+  right: 60px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .menu .menucard__article:hover .menucard__price {
+    right: 70px;
+  }
+}
+.menu .menucard__article:hover .menucard__check {
+  right: 0px;
+}
+.menu .menucard__article:hover .menucard__check > i {
+  animation: rotate 500ms ease-in forwards;
 }
 .menu .menucard__title {
   font-size: 18px;
@@ -922,16 +913,52 @@ footer ul .fa-hands-helping {
 }
 .menu .menucard__subtitle {
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
+  height: 18px;
+  width: 280px;
+  transition: 500ms;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu .menucard__price {
   font-size: 15px;
   font-weight: 700;
+  width: 40px;
+  transition: 500ms;
   position: absolute;
-  top: auto;
-  right: 6%;
-  bottom: 15%;
-  left: auto;
+  inset: auto 0 10px auto;
+}
+.menu .menucard__check {
+  background-color: #99e2d0;
+  height: 65px;
+  width: 55px;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: -70px;
+  transition: 500ms;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .menu .menucard__check {
+    width: 70px;
+  }
+}
+.menu .menucard__check i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  color: #ffffff;
+  font-size: 20px;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .menu .div__button--center {
   display: flex;

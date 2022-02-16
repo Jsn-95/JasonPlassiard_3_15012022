@@ -27,10 +27,6 @@
 
         &:hover {
             transform: scale(0.9);
-
-            @include mixins.desktop {
-                transform: scale(1.1);
-            }
         }
 
         @include mixins.desktop {
@@ -68,7 +64,7 @@
     & span {
         @extend %flex-center;
         background-color: variables.$color-tertiary;
-        color: darken(variables.$color-tertiary, $amount: 50%);
+        color: darken(variables.$color-tertiary, $amount: 37%);
         font-size: 15px;
         font-weight: 500;
         height: 29px;

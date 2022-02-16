@@ -7,10 +7,7 @@
 
 @mixin position-absolute($top, $right, $bottom, $left) {
     position: absolute;
-    top: $top;
-    right: $right;
-    bottom: $bottom;
-    left: $left;
+    inset: $top $right $bottom $left;
 }
 
 @mixin menu($height, $padding) {

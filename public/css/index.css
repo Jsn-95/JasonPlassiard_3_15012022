@@ -456,8 +456,21 @@ template {
   padding: 20px;
 }
 .localisation__search i {
-  margin-right: 10px;
+  position: absolute;
+  inset: auto auto auto 28%;
   font-size: 16px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .localisation__search i {
+    position: absolute;
+    inset: auto auto auto 38%;
+  }
+}
+@media (min-width: 1200px) {
+  .localisation__search i {
+    position: absolute;
+    inset: auto auto auto 43%;
+  }
 }
 .localisation__reserve {
   background-color: #f5f5f5;

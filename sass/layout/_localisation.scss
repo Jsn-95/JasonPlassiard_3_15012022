@@ -15,7 +15,13 @@
         padding: 20px;
 
         & i {
-            margin-right: 10px;
+            @include mixins.position-absolute(auto, auto, auto, 28%);
+            @include mixins.tablet {
+                @include mixins.position-absolute(auto, auto, auto, 38%);
+            }
+            @include mixins.desktop {
+                @include mixins.position-absolute(auto, auto, auto, 43%);
+            }
             font-size: 16px;
         }
     }
